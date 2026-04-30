@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Eagles Quintessents</title>
+     <link rel="icon" href="Img\whiteeagleslogo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo">WHITE <span>EAGLES</span> QUINTESSENTS</div>
+   <!-- MENU BUTTON -->
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+<!-- OVERLAY -->
+<div id="menuOverlay" class="menu-overlay">
+
+  <div class="menu-box">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+      <a href="index.html">Home</a>
+        <a href="index.html#teams">Team Achivements</a>
+<a href="index.html#about-box">About Us </a>
+        <a href="index.html#join">Join Us</a>
+ <button class="discord-btn" ><a href="https://discord.gg/zvvDKPnK7M">👑 Join Discord</a></button>
+  </div>
+
+</div>
+
+
+<style>
+    /* Menu Button */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 22px;
+  background: #ff2d55;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: white;
+  z-index: 1000;
+}
+
+/* Overlay Background */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 20, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+/* Active State */
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Menu Box */
+.menu-box {
+  width: 260px;
+  height: 100%;
+  background: rgba(10, 22, 34, 0.95);
+  border-left: 1px solid rgba(0, 224, 255, 0.2);
+  padding: 30px 20px;
+  transform: translateX(100%);
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slide In */
+.menu-overlay.active .menu-box {
+  transform: translateX(0);
+}
+
+/* Close Button */
+.close-btn {
+  align-self: flex-end;
+  background: #ff2d55;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Links */
+.menu-box a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* "Hover" Effect (works on tap too) */
+.menu-box a:hover,
+.menu-box a:active {
+  background: rgba(0, 224, 255, 0.15);
+  transform: translateX(5px);
+}
+
+/* Discord Button */
+.discord-btn {
+  margin-top: auto;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #5865F2, #8b5cf6);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.discord-btn:hover {
+  transform: scale(1.05);
+}
+</style>
+
+<script>
+    const menu = document.getElementById("menuOverlay");
+
+function openMenu() {
+  menu.classList.add("active");
+}
+
+function closeMenu() {
+  menu.classList.remove("active");
+}
+
+// Close when clicking outside
+menu.addEventListener("click", (e) => {
+  if (e.target === menu) {
+    closeMenu();
+  }
+});
+</script>
+</header>
+
+<!-- PLAYERS -->
+ <div>
+<section id="players" class="players">
+    <h2>Scarfall Lineup</h2>
+    <div class="player-grid">
+
+        <div class="player-card glow">
+            <img src="Img\crystal.png" class="avatar">
+            <h3>Crystal</h3>
+            <span class="badge">#2</span>
+            <p>Role – Supporter</p>
+            
+        </div>
+
+        <div class="player-card glow">
+            <img src="Img\Jackal.jpg" class="avatar">
+            <h3>Jackal</h3>
+            <span class="badge">#4</span>
+            <p>Role –  Supporter</p>
+        </div>
+
+        <div class="player-card glow">
+            <img src="Img\verru.png" class="avatar">
+            <h3>veeru</h3>
+            <span class="badge">#5</span>
+            <p>Role - Assulter </p>
+        </div>
+
+      <div class="player-card glow">
+            <img src="Img\gyro.jpg" class="avatar">
+            <h3>Gyro X</h3>
+            <span class="badge">#7</span>
+            <p>Role - Rusher </p>
+        </div>
+
+        <div class="player-card glow">
+  <span class="badge">#1</span>
+ <img src="Img\noncoyt.png" class="avatar">
+            <h3>Nonco yt </h3>
+             <p>Role - Substitute </p>
+</div>
+
+
+
+
+        <div class="player-card glow">
+            <img src="https://i.ibb.co/rdtq9rC/default-player.png" class="avatar">
+            <h3>Scarnox </h3>
+            <span class="badge">#6</span>
+            <p>Role - Substitute </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <footer class="footer">
+    <div class="footer-links">
+        <a href="#">YouTube</a>
+        <a href="https://www.instagram.com/whiteegales.gg/?igsh=ZjFubmVwdHMxOXE2#">Instagram</a>
+        <a href="https://discord.gg/zvvDKPnK7M">Discord</a>
+    </div>
+
+    <p class="footer-copy">
+        © 2025 White Eagles Esports — All Rights Reserved
+           
+    </p>
+
+    <br>
+
+    <p>
+         Website Develop By <a href="">Shubh Rajput</a> 
+    </p>
+</footer>
+
+
+
+</body>
+</html>
+
+</body>
+
+</html>
